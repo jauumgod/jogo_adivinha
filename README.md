@@ -7,7 +7,15 @@
  <h4 align="center">
     :construction:  Projeto em construção  :construction:
 </h4>
-#
-IMPORT JAVA UTIL RANDOM;<br>
-IMPORT JAVA UTIL SCANNER;
 
+#
+ ```xml
+import java.util.Random;
+import java.util.Scanner;
+```
+ `random number` entre 1 a 50.
+ #
+  ```xml
+Random randint = new Random();
+numero = randint.nextInt(1,50);
+```
