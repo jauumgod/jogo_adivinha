@@ -10,24 +10,28 @@ public class Main {
         Random randint = new Random();
         numero = randint.nextInt(1,50);
 
-        System.out.println("BEM VINDO");
+        System.out.println("BEM VINDO AO GAME [Você tem 10 tentativas!]");
 
-        System.out.print("Digite seu nome:  ");
+        System.out.print("Digite seu nome: ");
         name = scan.next();
 
         while(choice!=numero){
             tentativas++;
-
+            if(tentativas>10){
+                System.out.print("Você Perdeu, excedeu as 10 tentativas! ");
+            }
             System.out.print("Digite um numero entre [1-50]: ");
             choice = scan.nextInt();
-
+            if(choice==numero){
+                System.out.printf("PARABENS!!%s o numero Sorteado foi %d \n", name, numero);
+                break;
+            }
             if (choice>numero){
                 System.out.print("Calma ai bb, digite um número Menor! ");
             }
             if (choice<numero){
                 System.out.print("Opa, digite um número Maior! ");
             }
-
         }
     }
 }
